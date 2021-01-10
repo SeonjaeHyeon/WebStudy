@@ -1,0 +1,184 @@
+<!--Emmet(emmet.io)-->
+<!-- https://docs.emmet.io/abbreviations/syntax/ -->
+
+<!--1. HTML Document-->
+
+<!-- ! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!-- 2. Tag -->
+<!-- div -->
+<div></div>
+<!-- p -->
+<p></p>
+
+
+<!-- 3. Nesting operators -->
+
+<!-- Child: > -->
+<!-- div>ul>li -->
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+
+<!-- Sibling: + -->
+<!-- div+p+bq -->
+<div></div>
+<p></p>
+<blockquote></blockquote>
+
+<!-- Climb-up: ^ -->
+<!-- div+div>p>span+em^^^bq -->
+<div></div>
+<div>
+    <p><span></span><em></em></p>
+</div>
+<blockquote></blockquote>
+
+<!-- Multiplication: * -->
+<!-- ul>li*5 -->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<!-- Grouping: () -->
+<!-- div>(header>ul>li*2>a)+footer>p -->
+<div>
+    <header>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </header>
+    <footer>
+        <p></p>
+    </footer>
+</div>
+<!-- (div>dl>(dt+dd)*3)+footer>p -->
+<div>
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+</div>
+<fotter>
+    <p></p>
+</fotter>
+
+
+<!-- 4. Attribute operators -->
+
+<!-- ID and CLASS -->
+
+<!-- id: # -->
+<!-- div#id1 -->
+<div id="id1"></div>
+
+<!-- class: . -->
+<!-- div.class1 -->
+<div class="class1"></div>
+
+<!-- div#header+div.page+div#footer.class1.class2.class3 -->
+<div id="header"></div>
+<div class="page"></div>
+<div id="footer" class="class1 class2 class3"></div>
+
+<!-- Custom attributes -->
+<!-- td[title="Hello world!" colspan=3] -->
+<!-- td[title='Hello world!' colspan=3] -->
+<td title="Hello world!" colspan="3"></td>
+<!-- td[colspan title] -->
+<td colspan="" title=""></td>
+<!-- td[title=hello colspan=3] -->
+<td title="hello" colspan="3"></td>
+
+<!-- Item numbering: $ -->
+<!-- ul>li.item$*5 -->
+<ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+</ul>
+<!-- ul>li.item$$$*5 -->
+<ul>
+    <li class="item001"></li>
+    <li class="item002"></li>
+    <li class="item003"></li>
+    <li class="item004"></li>
+    <li class="item005"></li>
+</ul>
+<!-- Changing numbering base and direction -->
+<!-- ul>li.item$@-*5 -->
+<!-- This won't work on VS Code -->
+<ul>
+    <li class="item5"></li>
+    <li class="item4"></li>
+    <li class="item3"></li>
+    <li class="item2"></li>
+    <li class="item1"></li>
+</ul>
+<!-- ul>li.item$@3*5 -->
+<ul>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+    <li class="item6"></li>
+    <li class="item7"></li>
+</ul>
+<!-- ul>li.item$@-3*5 -->
+<!-- This won't work on VS Code -->
+<ul>
+    <li class="item7"></li>
+    <li class="item6"></li>
+    <li class="item5"></li>
+    <li class="item4"></li>
+    <li class="item3"></li>
+</ul>
+
+
+<!-- Text: {} -->
+<!-- a{Click me} -->
+<!-- a>{Click me} -->
+<a href="">Click me</a>
+<!-- a{click}+b{here} -->
+<a href="">click</a><b>here</b>
+<!-- a>{click}+b{here} -->
+<a href="">click<b>here</b></a>
+<!-- p>{Click }+a{here}+{ to continue} -->
+<p>
+    Click 
+    <a href="">here</a>
+    to continue
+</p>
+<!-- p{Click }+a{here}+{ to continue} -->
+<p>Click </p>
+<a href="">here</a> to continue
+
+
+<!-- Notes on abbreviation formatting -->
+<!-- (header > ul.nav > li*5) + footer -->
+(header > ul.nav > li*5) + <footer></footer>
+<!-- This won't work, because space is a stop symbol where Emmet stops abbreviation parsing. -->
