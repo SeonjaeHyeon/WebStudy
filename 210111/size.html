@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 80%;
+            font-size: 5px;
+        }
+        div {
+            background-color: gray;
+            border: 1px solid;
+            margin: 2px;
+            height: 50px;
+        }
+        div.div1 {
+            /* px: 픽셀 단위로, 모니터 해상도에 따라 달라진다. */
+            width: 50px;
+        }
+        div.div2 {
+            /* %: 상위 태그의 크기를 100%로 가진다. */
+            /* 상위 태그가 없는 경우 창 크기가 100%가 된다. */
+            /* 상위 태그인 <body>의 너비가 80%이므로 최종적으로 창 크기의 40%가 된다. */
+            width: 50%;
+        }
+        div.div3 {
+            /* vw 또는 vh: 창 크기를 100vw 또는 100vh로 가진다. */
+            /* vw는 너비, vh는 높이이다. */
+            /* 50vw는 창 너비의 절반이 된다. */
+            width: 50vw;
+        }
+        span.span1 {
+            /* px: 픽셀 단위로, 모니터 해상도에 따라 달라진다. */
+            /* 태그 크기의 기본값은 대부분 16px이다. */
+            font-size: 16px;
+        }
+        span.span2 {
+            /* em: 상위 태그의 크기를 1em으로 가진다. */
+            /* 상위 태그가 없는 경우 기본값인 16px가 1em이 된다. */
+            /* 상위 태그인 <body>의 font-size가 5px이므로 30px가 된다. */
+            font-size: 16em;
+        }
+        span.span3 {
+            /* rem: 최상위 태그 (<html>)의 크기를 1rem으로 가진다. */
+            /* 최상위 태그에 font-size 설정이 없는 경우 기본값인 16px가 1rem이 된다. */
+            /* 최상위 태그인 <html>의 font-size가 없어 기본값인 16px이므로 256px가 된다. */
+            font-size: 16rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <br>
+    <span class="span1">span box 1</span>
+    <span class="span2">span box 2</span>
+    <span class="span3">span box 3</span>
+</body>
+</html>
