@@ -1,0 +1,146 @@
+.container {
+	background-color: beige;
+	/* width: 20vw; */
+	height: 50vh;
+	display: flex;  /* Flex 적용 */
+
+	/* main axis */
+	/* 배치 방향 설정 */
+	
+	/* 기본값으로, 아이템들이 행(가로) 방향으로 배치됨. */
+	flex-direction: row;
+	/* 아이템들이 역순으로 가로 방향으로 배치됨. */
+	flex-direction: row-reverse;
+	/* 아이템들이 열(세로) 방향으로 배치됨. block 속성과 비슷 */
+	flex-direction: column;
+	/* 아이템들이 역순으로 세로 방향으로 배치됨. */
+	flex-direction: column-reverse;
+
+	/* over flex */
+	/* 줄넘김 처리 설정 */
+
+	/* 기본값으로, 줄바꿈을 하지 않음. 넘치면 컨테이너를 삐져나옴 */
+	flex-wrap: nowrap;
+	/* 줄바꿈을 함. float이나 inline-block 속성과 비슷 */
+	flex-wrap: wrap;
+	/* 아이템을 역순으로 배치하고 줄바꿈을 함. */
+	flex-wrap: wrap-reverse;
+
+	/* flex-flow = flex-direction + flex-wrap */
+	flex-flow: row nowrap;
+
+	/* main axis arrange item */
+	/* 메인축 방향 정렬 */
+
+	/* 기본값으로, 아이템을 시작점으로 정렬함. */
+	/* flex-direction이 row일 때는 왼쪽, column일 때는 위쪽임. */
+	justify-content: flex-start;
+	/* 아이템을 끝점으로 정렬함. */
+	/* flex-direction이 row일 때는 오른쪽, column일 때는 아래쪽임. */
+	justify-content: flex-end;
+	/* 아이템을 가운데로 정렬함. */
+	justify-content: center;
+	/* 아이템들의 사이에 균일한 간격을 만듦. */
+	justify-content: space-around;
+	/* 아이템들의 둘레에 균일한 간격을 만듦. */
+	justify-content: space-between;
+	/* 아이템들의 사이와 양 끝에 균일한 간격을 만듦. */
+	justify-content: space-evenly;
+
+	/* sub axis arrange item*/
+	/* 수직축 방향 정렬 */
+
+	/* 기본값으로, 아이템들이 수직축 방향으로 끝까지 늘어남. */
+	align-items: stretch;
+	/* 아이템들을 시작점으로 정렬함. */
+	/* flex-direction이 row일 때는 위쪽, column일 때는 왼쪽임. */
+	align-items: flex-start;
+	/* 아이템들을 끝점으로 정열함. */
+	/* flex-direction이 row일 때는 위쪽, column일 때는 왼쪽임. */
+	align-items: flex-end;
+	/* 아이템들을 가운데로 정렬함. */
+	align-items: center;
+	/* 아이템들을 텍스트 기준선을 따라 정렬함. */
+	align-items: baseline;
+
+	/* 여러 행 정렬 */
+	/* flex-wrap: wrap인 상태에서 아이템들의 행이 2줄 이상 될 때 수직축 방향을 정렬함. */
+	/* justify-content와 align-items와 같음. */
+	align-content: stretch;
+	align-content: flex-start;
+	align-content: flex-end;
+	align-content: center;
+	align-content: space-between;
+	align-content: space-around;
+	align-content: space-evenly;
+}
+
+.item {
+	width: 100px;
+	height: 40px;
+	border: 1px solid black;
+
+	/* flex-basis: 값이 width보다 더 우선되는 요소의 크기 */
+	/* flex 아이템의 기본 크기를 설정함. flex-driection이 row일 때는 너비, column일 때는 높이임. */
+	flex-basis: auto;  /* 기본값 */
+	flex-basis: 0;
+	flex-basis: 50%;
+	flex-basis: 300px;
+	flex-basis: 10rem;
+	flex-basis: content;  /* 컨텐츠의 크기 */
+
+	/* flex-grow: basis 지정해놓은 값을 넘어갈 때 어떤 식으로 증가시키는가? */
+	/* 아이템이 flex-basis의 값보다 커질 수 있는지를 결정함. 해당 아이템이 flexible한 박스로 변하고 원래의 크기보다 커지며 빈 공간을 메움. */
+	flex-grow: 0;  /* 기본값 */
+	flex-grow: 1;
+
+	/* flex-shrink: basis 지정해놓은 값 이하로 내려갈 때 어떤 식으로 감소시키는가? */
+	/* 아이템이 flex-basis의 값보다 작아질 수 있는지를 결정함. 해당 아이템이 flexible한 박스로 변하고 flex-basis보다 작아짐. */
+	flex-shrink: 0;
+	flex-shrink: 1;  /* 기본값 */
+
+	/* flex = flex-grow + flex-shrink + flex-basis */
+	flex: 0 0 auto;
+}
+
+.item1{
+	background-color: #ef9a9a;
+	padding: 20px;
+}
+.item2{
+	background-color: #f48fb1;
+
+	/* 배치 순서 */
+	/* 각 아이템들의 시각적 나열 순서를 결정함. */
+	/* 숫자값이 들어가며, 작은 숫자일 수록 먼저 배치됨. */
+	order: -1;
+
+	flex-grow: 2;
+	flex-shrink: 2;
+}
+.item3{
+	background-color: #ce93d8;
+	flex-grow: 2;
+	flex-shrink: 2;
+}
+.item4{
+	background-color: #b39ddb;
+}
+.item5{
+	background-color: #90caf9;
+}
+.item6{
+	background-color: #a5d6a7;
+}
+.item7{
+	background-color: #e6ee9c;
+}
+.item8{
+	background-color: #fff59d;
+}
+.item9{
+	background-color: #ffcc80;
+}
+.item10{
+	background-color: #ffab91;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 80%;
+        }
+        .container {
+            display: grid;
+            background-color: coral;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);  /* 최솟값과 최댓값을 설정할 수 있는 함수. */
+            /* Gutters */
+            column-gap: 10px;  /* 열 간격 설정 */
+            row-gap: 1em;  /* 행 간격 설정 */
+        }
+        .item {
+            background-color: orange;
+            border: 1px solid red;
+        }
+        .item1 {
+            display: contents;  /* 아이템들을 담는 컨테이너를 없앤다. 텍스트 값은 없어지지 않는다. */
+        }
+        .nested {
+            background-color: gold;
+            border: 1px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">001</div>
+        <div class="item">002
+            <p>I have some more content in.</p>
+            <p>This makes me taller than 100 pixels.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="item">003</div>
+        <div class="item">004</div>
+        <div class="item">005</div>
+    </div>
+    <p></p>
+    <div class="container">
+        <div class="item item1">
+            <div class="nested">A</div>
+            <div class="nested">B</div>
+            <div class="nested">C</div>
+        </div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+    </div>
+</body>
+</html>
